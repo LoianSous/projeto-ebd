@@ -1,0 +1,113 @@
+import { StyleSheet } from 'react-native';
+
+export const Styles = (theme: any) => StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: theme.container,
+  },
+  linkpassword: {
+    marginLeft: 115,
+  },
+  backButton: {
+    position: 'absolute',
+    top: 20,
+    left: 20,
+    zIndex: 10,
+    marginTop: 30,
+  },
+  logoWrap: {
+      width: 120,
+      height: 120,
+      borderRadius: 34,
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: theme.container,
+      // sombra (Android/iOS)
+      elevation: 2,
+      shadowColor: '#000',
+      shadowOpacity: 0.08,
+      shadowRadius: 10,
+      shadowOffset: { width: 0, height: 6 },
+      marginBottom: 18,
+      marginTop: 30,
+    },
+  inputWrapper: {
+  width: '100%',
+  flexDirection: 'row',
+  alignItems: 'center',
+  position: 'relative',
+  marginBottom: 15, // 👈 AQUI sim
+},
+eyeButton: {
+  position: 'absolute',
+  right: 12,
+  height: '100%',        // 🔥 acompanha o input
+  justifyContent: 'center',
+},
+  content: {
+    flex: 1,
+    backgroundColor: theme.background,
+  },
+  header: {
+    alignItems: 'center',
+    marginBottom: 40,
+    marginTop: 50,
+  },
+  logo: {
+    width: 144,
+    height: 144,
+    marginBottom: 20,
+  },
+  title: {
+    color: theme.text,
+    fontSize: 35,
+    textAlign: "center",
+  },
+  title2: {
+    color: theme.text,
+    fontSize: 35,
+    textAlign: "center",
+  },
+  titleinputs: {
+    color: theme.text,
+    fontSize: 25,
+    marginBottom: 10,
+  },
+  form: {
+    paddingHorizontal: 30,
+  },
+  input: {
+    width: '100%',
+    height: 50,
+    backgroundColor: theme.inputBackground,
+    borderRadius: 8,
+    paddingHorizontal: 15,
+    marginBottom: 15,
+    fontSize: 16,
+    borderColor: '#ccc',
+    color: theme.text,
+  },
+  button: {
+    backgroundColor: theme.buttonBackground,
+    paddingVertical: 12,
+    paddingHorizontal: 40,
+    borderRadius: 25,
+    marginTop: 10,
+  },
+  buttonContainer: {
+    paddingHorizontal: 100,
+    padding: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  buttonText: {
+    color: theme.buttonText,
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  error: {
+    color: 'red',
+    fontSize: 14,
+    marginBottom: 10,
+  },
+});
