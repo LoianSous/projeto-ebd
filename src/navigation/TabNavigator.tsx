@@ -25,7 +25,7 @@ export default function TabNavigator() {
   const getIcon = (routeName: keyof TabParamList, focused: boolean): IconName => {
     switch (routeName) {
       case 'Usuario':
-        return focused ? 'home' : 'home-outline';
+        return focused ? 'home-account' : 'home-account';
 
       case 'Aulas':
         // ícone de lista com check (igual ao da imagem)
@@ -51,8 +51,8 @@ export default function TabNavigator() {
       screenOptions={({ route }) => ({
         headerShown: false,
 
-        tabBarActiveTintColor: theme.text,
-        tabBarInactiveTintColor: theme.text,
+        tabBarActiveTintColor: theme.buttonText,
+        tabBarInactiveTintColor: theme.buttonText,
 
         tabBarStyle: {
           backgroundColor: theme.buttonBackground,
@@ -74,8 +74,8 @@ export default function TabNavigator() {
             <View
               style={{
                 borderRadius: 24,
-                width: 44,
-                height: 44,
+                width: 35,
+                height: 35,
                 alignItems: 'center',
                 justifyContent: 'center',
                 backgroundColor: focused ? theme.circlebar : 'transparent',

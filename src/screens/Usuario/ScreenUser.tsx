@@ -81,9 +81,9 @@ export default function Usuario() {
         <View style={styles.headerLeft}>
           <View style={styles.headerIconBox}>
             <MaterialCommunityIcons
-              name="cellphone"
+              name="school"
               size={22}
-              color={theme.iconbar}
+              color={theme.circlebar}
             />
           </View>
 
@@ -200,7 +200,7 @@ export default function Usuario() {
             </View>
 
             <ThemeOption
-              label="Romântico"
+              label="Luz da manhã"
               name="light"
               active={currentTheme === 'light'}
               theme={theme}
@@ -211,7 +211,7 @@ export default function Usuario() {
             />
 
             <ThemeOption
-              label="Escuro"
+              label="Vigilia"
               name="dark"
               active={currentTheme === 'dark'}
               theme={theme}
@@ -222,56 +222,56 @@ export default function Usuario() {
             />
 
             <ThemeOption
-              label="Elegante"
-              name="elegant"
-              active={currentTheme === 'elegant'}
+              label="Concilio"
+              name="Concilio"
+              active={currentTheme === 'Concilio'}
               theme={theme}
               onPress={() => {
-                setTheme('elegant');
+                setTheme('Concilio');
                 setShowThemeModal(false);
               }}
             />
 
             <ThemeOption
-              label="Jovem"
-              name="young"
-              active={currentTheme === 'young'}
+              label="Profundo"
+              name="Profundo"
+              active={currentTheme === 'Profundo'}
               theme={theme}
               onPress={() => {
-                setTheme('young');
+                setTheme('Profundo');
                 setShowThemeModal(false);
               }}
             />
 
             <ThemeOption
-              label="Futurista"
-              name="futuristic"
-              active={currentTheme === 'futuristic'}
+              label="Missão"
+              name="Missao"
+              active={currentTheme === 'Missao'}
               theme={theme}
               onPress={() => {
-                setTheme('futuristic');
+                setTheme('Missao');
                 setShowThemeModal(false);
               }}
             />
 
             <ThemeOption
-              label="Minimalista"
-              name="minimal"
-              active={currentTheme === 'minimal'}
+              label="Altar"
+              name="Altar"
+              active={currentTheme === 'Altar'}
               theme={theme}
               onPress={() => {
-                setTheme('minimal');
+                setTheme('Altar');
                 setShowThemeModal(false);
               }}
             />
 
             <ThemeOption
-              label="Clássico"
-              name="classic"
-              active={currentTheme === 'classic'}
+              label="Colheita"
+              name="Colheita"
+              active={currentTheme === 'Colheita'}
               theme={theme}
               onPress={() => {
-                setTheme('classic');
+                setTheme('Colheita');
                 setShowThemeModal(false);
               }}
             />

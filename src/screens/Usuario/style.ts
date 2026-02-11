@@ -87,7 +87,7 @@ export const Styles = (theme: any) =>
     actionButton: {
       backgroundColor: theme.buttonBackground,
       borderRadius: 14,
-      paddingVertical: 18,
+      paddingVertical: 15,
       paddingHorizontal: 16,
       flexDirection: 'row',
       alignItems: 'center',
@@ -95,7 +95,7 @@ export const Styles = (theme: any) =>
     },
     actionText: {
       color: theme.buttonText,
-      fontSize: 18,
+      fontSize: 15,
       fontWeight: '700',
     },
 

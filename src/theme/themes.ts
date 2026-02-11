@@ -1,20 +1,25 @@
 export const LightTheme = {
   // Backgrounds
-  background: '#F6F4EA',       // bege claro
-  container: '#FFFFFF',        // branco para cards
+  background: '#F6F4EA', // bege claro
+  container: '#FFFFFF', // branco para cards
 
   // Cores principais
-  primary: '#655C00',          // dourado principal
+  primary: '#655C00', // dourado principal
   primaryDark: '#4E4700',
   primaryLight: '#8A7F1F',
 
   // Textos
-  text: '#3B3600',              // texto principal
+  text: '#3B3600',
   texttitle: '#655C00',
   textnomeconfig: '#655C00',
   textperfil: '#655C00',
+  texteditarcartas: '#655C00',
+  textsair: '#655C00',
   textinput: '#655C00',
+  textinputdentro: '#3B3600',
   textmodalcolor: '#1E1E1E',
+  titlemodalcolor: '#FFFFFF',
+  textmodalsenha: '#FFFFFF',
 
   // Ícones
   arrow: '#655C00',
@@ -26,10 +31,10 @@ export const LightTheme = {
   permissoes: '#655C00',
   temas: '#655C00',
   circlebar: '#655C00',
+  iconbar: '#FFFFFF',
 
   // Inputs
   inputBackground: '#FFFFFF',
-  textinputdentro: '#3B3600',
 
   // Botões
   buttonBackground: '#655C00',
@@ -39,219 +44,294 @@ export const LightTheme = {
   preview: '#EFECD9',
   fundoconfirmarsenha: '#1E1E1E',
   carregandotextedit: '#FFFFFF',
-  titlemodalcolor: '#FFFFFF',
-  textmodalsenha: '#FFFFFF',
-  textsair: '#655C00',
-  iconbar: '#FFFFFF',
 };
-
 
 export const DarkTheme = {
+  // Preview
   preview: '#121212',
+
+  // Backgrounds
   background: '#121212',
-  olho: '#FFFFFF',
   container: '#1E1E1E',
+
+  // Cores principais
   primary: '#FFFFFF',
-  carregandotextedit: '#FFFFFF',
-  arrow: '#1E1E1E',
-  texteditarcartas: '#FFFFFF',
-  icontemas: '#ffffff',
-  gear: '#1E1E1E',
-  fundoconfirmarsenha: '#1E1E1E',
-  iconcompartilhar: '#FFFFFF',
-  temas: '#1E1E1E',
-  textmodalsenha: '#FFFFFF',
-  permissoes: '#1E1E1E',
-  iconperfil: '#1E1E1E',
-  textsair: '#1E1E1E',
-  textperfil: '#1E1E1E',
-  textinputdentro: '#FFFFFF',
+  primaryDark: '#E5E5E5',
+  primaryLight: '#FFFFFF',
+
+  // Textos (ajustado para aparecer no fundo escuro)
   text: '#F5F5F5',
-  textmodalcolor: '#ababab',
-  titlemodalcolor: '#1E1E1E',
   texttitle: '#FFFFFF',
+  textnomeconfig: '#F5F5F5',
+  textperfil: '#F5F5F5',
+  texteditarcartas: '#F5F5F5',
+  textsair: '#F5F5F5',
   textinput: '#FFFFFF',
-  textnomeconfig: '#1E1E1E',
-  inputBackground: '#2A2A2A',
-  buttonBackground: '#1E1E1E',
-  buttonText: '#FFFFFF',
-  circlebar: '#2A2A2A',
-  iconbar: '#FFFFFF',
-};
-
-export const ElegantTheme = {
-  preview: '#4f2f42',
-  background: '#F7F7F8',
-  container: '#FFFFFF',
-  primary: '#4f2f42',
-  titlemodalcolor: '#4f2f42',
-  textmodalcolor: '#4f2f42',
-  carregandotextedit: '#FFFFFF',
-  fundoconfirmarsenha: '#1E1E1E',
-  arrow: '#4f2f42',
-  texteditarcartas: '#4f2f42',
-  icontemas: '#4f2f42',
-  permissoes: '#4f2f42',
-  olho: '#4f2f42',
-  gear: '#4f2f42',
-  textmodalsenha: '#FFFFFF',
-  temas: '#4f2f42',
-  iconcompartilhar: '#4f2f42',
-  iconperfil: '#4f2f42',
-  textsair: '#4f2f42',
   textinputdentro: '#FFFFFF',
-  textperfil: '#4f2f42',
-  text: '#F7F7F8',
-  textnomeconfig: '#4f2f42',
-  texttitle: '#4f2f42',
-  textinput: '#999',
-  inputBackground: '#E8EEF5',
-  buttonBackground: '#4f2f42',
+  textmodalcolor: '#ABABAB',
+  titlemodalcolor: '#FFFFFF',
+  textmodalsenha: '#FFFFFF',
+
+  // Ícones (ajustado)
+  olho: '#FFFFFF',
+  icontemas: '#FFFFFF',
+  iconcompartilhar: '#FFFFFF',
+  iconperfil: '#FFFFFF',
+  arrow: '#FFFFFF',
+  gear: '#FFFFFF',
+  permissoes: '#FFFFFF',
+  temas: '#FFFFFF',
+  iconbar: '#FFFFFF',
+
+  // Inputs
+  inputBackground: '#2A2A2A',
+
+  // Botões
+  buttonBackground: '#2A2A2A',
   buttonText: '#FFFFFF',
-  circlebar: '#F7F7F8',
-  iconbar: '#111827',
+
+  // Outros
+  circlebar: '#2A2A2A',
+  fundoconfirmarsenha: '#1E1E1E',
+  carregandotextedit: '#FFFFFF',
 };
 
-export const YoungTheme = {
+export const ConcilioTheme = {
+  // Backgrounds
+  background: '#F6F4EA', // bege claro
+  container: '#FFFFFF', // branco para cards
+
+  // Cores principais
+  primary: '#655C00', // dourado principal
+  primaryDark: '#4E4700',
+  primaryLight: '#8A7F1F',
+
+  // Textos
+  text: '#3B3600',
+  texttitle: '#655C00',
+  textnomeconfig: '#655C00',
+  textperfil: '#655C00',
+  texteditarcartas: '#655C00',
+  textsair: '#655C00',
+  textinput: '#655C00',
+  textinputdentro: '#3B3600',
+  textmodalcolor: '#1E1E1E',
+  titlemodalcolor: '#FFFFFF',
+  textmodalsenha: '#FFFFFF',
+
+  // Ícones
+  arrow: '#655C00',
+  icontemas: '#655C00',
+  gear: '#655C00',
+  olho: '#655C00',
+  iconperfil: '#655C00',
+  iconcompartilhar: '#655C00',
+  permissoes: '#655C00',
+  temas: '#655C00',
+  circlebar: '#FFFFFF',
+  iconbar: '#655C00',
+
+  // Inputs
+  inputBackground: '#FFFFFF',
+
+  // Botões
+  buttonBackground: '#655C00',
+  buttonText: '#FFFFFF',
+
+  // Outros
+  preview: '#EFECD9',
+  fundoconfirmarsenha: '#1E1E1E',
+  carregandotextedit: '#FFFFFF',
+};
+
+export const ProfundoTheme = {
   preview: '#f2a5a7',
   background: '#e3b39f',
   container: '#edd5c5',
-  textmodalcolor: '#f2a5a7',
-  fundoconfirmarsenha: '#1E1E1E',
-  primary: '#edd5c5',
-  texteditarcartas: '#edd5c5',
-  icontemas: '#fed4f6',
-  carregandotextedit: '#FFFFFF',
-  iconperfil: '#edd5c5',
-  textmodalsenha: '#FFFFFF',
-  temas: '#edd5c5',
-  textsair: '#edd5c5',
-  olho: '#B41513',
-  permissoes: '#edd5c5',
-  textperfil: '#edd5c5',
-  arrow: '#B41513',
-  titlemodalcolor: '#f2a5a7',
-  textinputdentro: '#f2a5a7',
-  iconcompartilhar: '#FFFFFF',
-  gear: '#B41513',
-  text: '#F4F4F5',
-  texttitle: '#edd5c5',
-  textinput: '#FFFFFF',
-  inputBackground: '#edd5c5',
+  primary: '#f2a5a7',
+  primaryDark: '#DE7E81',
+  primaryLight: '#F7C1C3',
+
+  // Textos
+  text: '#FFFFFF',
+  texttitle: '#FFFFFF',
   textnomeconfig: '#B41513',
+  textperfil: '#FFFFFF',
+  texteditarcartas: '#FFFFFF',
+  textsair: '#FFFFFF',
+  textinput: '#FFFFFF',
+  textinputdentro: '#f2a5a7',
+  textmodalcolor: '#f2a5a7',
+  titlemodalcolor: '#f2a5a7',
+  textmodalsenha: '#FFFFFF',
+
+  // Ícones
+  olho: '#B41513',
+  arrow: '#B41513',
+  icontemas: '#fed4f6',
+  gear: '#B41513',
+  iconperfil: '#FFFFFF',
+  iconcompartilhar: '#FFFFFF',
+  permissoes: '#FFFFFF',
+  temas: '#FFFFFF',
+  iconbar: '#F4F4F5',
+
+  // Inputs
+  inputBackground: '#edd5c5',
+
+  // Botões
   buttonBackground: '#f2a5a7',
   buttonText: '#edd5c5',
+
+  // Outros
   circlebar: '#edd5c5',
-  iconbar: '#F4F4F5',
+  fundoconfirmarsenha: '#1E1E1E',
+  carregandotextedit: '#FFFFFF',
 };
 
-export const FuturisticTheme = {
-  preview: '#FFE7E7',
+export const MissaoTheme = {
+  preview: '#38BDF8',
   background: '#0F172A',
   container: '#020617',
-  textinputdentro: '#FFFFFF',
-  fundoconfirmarsenha: '#1E1E1E',
-  texteditarcartas: '#B41513',
-  carregandotextedit: '#FFFFFF',
-  icontemas: '#ffffff',
-  textmodalsenha: '#FFFFFF',
   primary: '#38BDF8',
-  olho: '#B41513',
-  arrow: '#B41513',
-  textmodalcolor: '#FFFFFF',
-  permissoes: '#B41513',
-  gear: '#B41513',
-  iconperfil: '#B41513',
-  temas: '#B41513',
-  titlemodalcolor: '#B41513',
-  textsair: '#B41513',
-  iconcompartilhar: '#FFFFFF',
-  textperfil: '#B41513',
+  primaryDark: '#0EA5E9',
+  primaryLight: '#7DD3FC',
+
+  // Textos
   text: '#E5E7EB',
-  texttitle: '#1E1E1E',
+  texttitle: '#E5E7EB',
+  textnomeconfig: '#E5E7EB',
+  textperfil: '#E5E7EB',
+  texteditarcartas: '#E5E7EB',
+  textsair: '#E5E7EB',
   textinput: '#FFFFFF',
+  textinputdentro: '#FFFFFF',
+  textmodalcolor: '#FFFFFF',
+  titlemodalcolor: '#FFFFFF',
+  textmodalsenha: '#FFFFFF',
+
+  // Ícones
+  olho: '#38BDF8',
+  arrow: '#38BDF8',
+  icontemas: '#FFFFFF',
+  gear: '#38BDF8',
+  iconperfil: '#38BDF8',
+  permissoes: '#38BDF8',
+  temas: '#38BDF8',
+  iconcompartilhar: '#FFFFFF',
+  iconbar: '#E5E7EB',
+
+  // Inputs
   inputBackground: '#020617',
-  textnomeconfig: '#B41513',
+
+  // Botões
   buttonBackground: '#38BDF8',
   buttonText: '#020617',
+
+  // Outros
   circlebar: '#38BDF8',
-  iconbar: '#E5E7EB',
+  fundoconfirmarsenha: '#1E1E1E',
+  carregandotextedit: '#FFFFFF',
 };
 
-export const MinimalTheme = {
-  preview: '#FFE7E7',
-  textinputdentro: '#FFFFFF',
+export const AltarTheme = {
+  preview: '#A855F7',
   background: '#FDF4FF',
   container: '#FFFFFF',
   primary: '#A855F7',
-  fundoconfirmarsenha: '#1E1E1E',
-  arrow: '#B41513',
-  temas: '#B41513',
-  icontemas: '#ffffff',
-  textmodalsenha: '#FFFFFF',
-  carregandotextedit: '#FFFFFF',
-  gear: '#B41513',
-  iconperfil: '#B41513',
-  texteditarcartas: '#B41513',
-  olho: '#B41513',
-  iconcompartilhar: '#FFFFFF',
-  textsair: '#B41513',
-  textmodalcolor: '#FFFFFF',
-  permissoes: '#B41513',
-  textperfil: '#B41513',
+  primaryDark: '#7C3AED',
+  primaryLight: '#C084FC',
+
+  // Textos
   text: '#1F2937',
   texttitle: '#1E1E1E',
-  titlemodalcolor: '#B41513',
-  textinput: '#FFFFFF',
-  textnomeconfig: '#B41513',
+  textnomeconfig: '#1F2937',
+  textperfil: '#1F2937',
+  texteditarcartas: '#1F2937',
+  textsair: '#1F2937',
+  textinput: '#1F2937',
+  textinputdentro: '#1F2937',
+  textmodalcolor: '#1F2937',
+  titlemodalcolor: '#1E1E1E',
+  textmodalsenha: '#FFFFFF',
+
+  // Ícones
+  olho: '#A855F7',
+  arrow: '#A855F7',
+  icontemas: '#A855F7',
+  gear: '#A855F7',
+  iconperfil: '#A855F7',
+  permissoes: '#A855F7',
+  temas: '#A855F7',
+  iconcompartilhar: '#A855F7',
+  iconbar: '#1F2937',
+
+  // Inputs
   inputBackground: '#FAE8FF',
+
+  // Botões
   buttonBackground: '#A855F7',
   buttonText: '#FFFFFF',
+
+  // Outros
   circlebar: '#A855F7',
-  iconbar: '#1F2937',
+  fundoconfirmarsenha: '#1E1E1E',
+  carregandotextedit: '#FFFFFF',
 };
 
-export const ClassicTheme = {
-  preview: '#FFE7E7',
+export const ColheitaTheme = {
+  preview: '#22D3EE',
   background: '#020617',
   container: '#020617',
-  olho: '#B41513',
-  fundoconfirmarsenha: '#1E1E1E',
   primary: '#22D3EE',
-  textmodalsenha: '#FFFFFF',
-  textinputdentro: '#FFFFFF',
-  arrow: '#B41513',
-  icontemas: '#ffffff',
-  titlemodalcolor: '#B41513',
-  gear: '#B41513',
-  carregandotextedit: '#FFFFFF',
-  iconperfil: '#B41513',
-  permissoes: '#B41513',
-  temas: '#B41513',
-  texteditarcartas: '#B41513',
-  textmodalcolor: '#FFFFFF',
-  textsair: '#B41513',
-  textperfil: '#B41513',
-  iconcompartilhar: '#FFFFFF',
+  primaryDark: '#06B6D4',
+  primaryLight: '#67E8F9',
+
+  // Textos
   text: '#E5E7EB',
-  textnomeconfig: '#B41513',
-  texttitle: '#1E1E1E',
+  texttitle: '#E5E7EB',
+  textnomeconfig: '#E5E7EB',
+  textperfil: '#E5E7EB',
+  texteditarcartas: '#E5E7EB',
+  textsair: '#E5E7EB',
   textinput: '#FFFFFF',
-  inputBackground: '#020617',
+  textinputdentro: '#FFFFFF',
+  textmodalcolor: '#E5E7EB',
+  titlemodalcolor: '#E5E7EB',
+  textmodalsenha: '#FFFFFF',
+
+  // Ícones
+  olho: '#22D3EE',
+  arrow: '#22D3EE',
+  icontemas: '#FFFFFF',
+  gear: '#22D3EE',
+  iconperfil: '#22D3EE',
+  permissoes: '#22D3EE',
+  temas: '#22D3EE',
+  iconcompartilhar: '#FFFFFF',
+  iconbar: '#22D3EE',
+
+  // Inputs
+  inputBackground: '#0B1220',
+
+  // Botões
   buttonBackground: '#22D3EE',
   buttonText: '#020617',
+
+  // Outros
   circlebar: '#A78BFA',
-  iconbar: '#22D3EE',
+  fundoconfirmarsenha: '#1E1E1E',
+  carregandotextedit: '#FFFFFF',
 };
 
 export const themes = {
   light: LightTheme,
   dark: DarkTheme,
-  elegant: ElegantTheme,
-  young: YoungTheme,
-  futuristic: FuturisticTheme,
-  minimal: MinimalTheme,
-  classic: ClassicTheme,
+  Concilio: ConcilioTheme,
+  Profundo: ProfundoTheme,
+  Missao: MissaoTheme,
+  Altar: AltarTheme,
+  Colheita: ColheitaTheme,
 };
 
 export type ThemeName = keyof typeof themes;
