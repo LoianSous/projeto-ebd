@@ -4,6 +4,9 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Styles } from './style';
 import { useTheme } from '../../theme/ThemeContext';
 import { Feather } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../../types/types';
 
 type PessoaCard = {
   id: string;
@@ -12,9 +15,17 @@ type PessoaCard = {
   city: string;
 };
 
+type NavigationProp = NativeStackNavigationProp<
+  RootStackParamList,
+  'FormularioPessoa'
+>;
+
+
 export default function ScreenPessoas() {
   const { theme } = useTheme();
   const styles = Styles(theme);
+  const navigation = useNavigation<NavigationProp>();
+
 
   const mockPessoas: PessoaCard[] = useMemo(
     () => [
@@ -35,8 +46,9 @@ export default function ScreenPessoas() {
   };
 
   const handleAdd = () => {
-    console.log('Adicionar pessoa (mock)');
-  };
+  navigation.navigate('FormularioPessoa');
+};
+
 
   const handleEmail = (id: string) => {
     console.log('Email para pessoa:', id);

@@ -17,9 +17,8 @@ export type RootStackParamList = {
       }
     | undefined;
 
-  FormularioCarta: {
-    letterTitle: string;
-  };
+ FormularioPessoa: undefined;
+
 
   ScreenPagamentoPIX: {
     paymentId: string;

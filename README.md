@@ -1,10 +1,5 @@
-Códigos para ajustar o Dominio: 
-                            │
-                            ├─ Frontend app: ScreenConclusao.tsx, ScreenEditarCartas.tsx, ScreenFormularioCarta.tsx, api.ts;
-                            ├─ Frontend web: api.ts;
-                            ├─ Backend: main.go,
 
-app-mobile/
+projeto-ebd/
 ├─ .expo/
 ├─ node_modules/
 ├─ assets/
@@ -40,8 +35,14 @@ app-mobile/
 │  │  ├─ Login/
 │  │  │  ├─ ScreenLogin.tsx
 │  │  │  └─ style.ts
-│  │  ├─ MinhasCartas/
-│  │  │  ├─ ScreenMinhasCartas.tsx
+│  │  ├─ Aulas/
+│  │  │  ├─ ScreenAulas.tsx
+│  │  │  └─ style.ts
+│  │  ├─ Turmas/
+│  │  │  ├─ ScreenTurmas.tsx
+│  │  │  └─ style.ts
+│  │  ├─ Pessoas/
+│  │  │  ├─ ScreenPessoas.tsx
 │  │  │  └─ style.ts
 │  │  ├─ Perfil/
 │  │  │  ├─ ScreenPerfil.tsx

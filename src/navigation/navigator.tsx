@@ -16,7 +16,7 @@ import Alter from '../screens/recoverpassword/ScreenAlter';
 
 /* 🔐 privadas */
 import TabNavigator from './TabNavigator';
-import FormularioCarta from '../screens/FormularioCarta/ScreenFormularioCarta';
+import FormularioPessoa from '../screens/FormularioPessoa/ScreenFormularioPessoa';
 import EditarCartas from '../screens/EditarCartas/ScreenEditarCartas';
 import Conclusao from '../screens/Conclusao/ScreenConclusao';
 import Configuracao from '../screens/Configuracao/ScreenConfiguracao';
@@ -36,7 +36,7 @@ export default function Navigator() {
           /* 🔐 STACK PRIVADO */
           <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="MainTabs" component={TabNavigator} />
-            <Stack.Screen name="FormularioCarta" component={FormularioCarta} />
+            <Stack.Screen name="FormularioPessoa" component={FormularioPessoa} />
             <Stack.Screen name="EditarCartas" component={EditarCartas} />
             <Stack.Screen name="Conclusao" component={Conclusao} />
             <Stack.Screen name="Configuracao" component={Configuracao} />
