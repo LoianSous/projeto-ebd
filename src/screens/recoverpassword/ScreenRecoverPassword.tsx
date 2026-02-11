@@ -10,7 +10,7 @@ import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import { recoverRequest } from "../../services/auth";
 import Loading from '../Loading/loading';
 import { useTheme } from '../../theme/ThemeContext';
-import Logo from '../../../assets/logotelas.svg';
+import Logo from '../../../assets/graduation-cap.svg';
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList, "Recover">;
 
@@ -63,7 +63,9 @@ export default function Recover() {
 
         <View style={styles.content}>
           <View style={styles.header}>
-            <Logo width={160} height={160} color={theme.primary} />
+            <View style={styles.logoWrap}>
+            <Logo width={70} height={70} color={theme.primary} />
+          </View>
             <Text style={styles.title}>{"Recuperar senha."}</Text>
           </View>
 

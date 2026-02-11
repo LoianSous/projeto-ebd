@@ -9,7 +9,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import { resetPassword } from '../../services/auth';
 import { useTheme } from '../../theme/ThemeContext';
-import Logo from '../../../assets/logotelas.svg';
+import Logo from '../../../assets/graduation-cap.svg';
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList, "Alter">;
 
@@ -76,7 +76,9 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
       <View style={styles.content}>
         <View style={styles.header}>
-          <Logo width={160} height={160} color={theme.primary} />
+          <View style={styles.logoWrap}>
+            <Logo width={70} height={70} color={theme.primary} />
+          </View>
           <Text style={styles.title}>Alterar senha!</Text>
         </View>
 

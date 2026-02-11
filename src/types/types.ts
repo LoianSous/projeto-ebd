@@ -1,8 +1,5 @@
 // src/types/types.ts
 
-/* =========================
-   STACK PRINCIPAL
-========================= */
 export type RootStackParamList = {
   /* 🔓 Público */
   Home: undefined;
@@ -14,9 +11,11 @@ export type RootStackParamList = {
   Alter: undefined;
 
   /* 🔐 Privado */
-  MainTabs: {
-    screen?: keyof TabParamList;
-  } | undefined;
+  MainTabs:
+    | {
+        screen?: keyof TabParamList;
+      }
+    | undefined;
 
   FormularioCarta: {
     letterTitle: string;
@@ -46,12 +45,13 @@ export type RootStackParamList = {
   };
 };
 
-
 /* =========================
    TABS
 ========================= */
 export type TabParamList = {
-  Usuario: undefined;
-  MinhasCartas: undefined;
-  Perfil: undefined;
+  Usuario: undefined; // Início
+  Aulas: undefined;
+  Perfil: undefined; // Meu perfil
+  Turmas: undefined;
+  Pessoas: undefined;
 };

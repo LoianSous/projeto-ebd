@@ -1,10 +1,82 @@
 import { api } from './api';
 
+const delay = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+/**
+ * Ligue isso pra forçar login fake SEM tentar backend.
+ * (deixe false quando tiver backend)
+ */
+const USE_FAKE_LOGIN = true;
+
+/**
+ * Mesmo "shape" de resposta que o axios retorna (o seu Login usa response.data.token/id/name)
+ */
+type FakeLoginResponse = {
+  data: {
+    token: string;
+    id: number;
+    name: string;
+  };
+};
+
 export async function loginUser(identifier: string, password: string) {
-  return api.post("/login", {
-    identifier: identifier,
-    password: password,
-  });
+  // ✅ 1) Se quiser sempre fake:
+  if (USE_FAKE_LOGIN) {
+    await delay(600);
+
+    if (!identifier?.trim() || !password?.trim()) {
+      const err: any = new Error('Credenciais inválidas');
+      err.response = { data: { error: 'Informe email/usuário e senha.' } };
+      throw err;
+    }
+
+    const name =
+      identifier.includes('@')
+        ? identifier.split('@')[0]
+        : identifier;
+
+    const fakeResponse: FakeLoginResponse = {
+      data: {
+        token: `fake-token-${Date.now()}`,
+        id: 1,
+        name: name || 'Usuário',
+      },
+    };
+
+    return fakeResponse;
+  }
+
+  // ✅ 2) Se não estiver forçando fake, tenta backend e se falhar cai no fake
+  try {
+    return await api.post('/login', {
+      identifier: identifier,
+      password: password,
+    });
+  } catch (e) {
+    // fallback fake (útil enquanto backend não existe)
+    await delay(600);
+
+    if (!identifier?.trim() || !password?.trim()) {
+      const err: any = new Error('Credenciais inválidas');
+      err.response = { data: { error: 'Informe email/usuário e senha.' } };
+      throw err;
+    }
+
+    const name =
+      identifier.includes('@')
+        ? identifier.split('@')[0]
+        : identifier;
+
+    const fakeResponse: FakeLoginResponse = {
+      data: {
+        token: `fake-token-${Date.now()}`,
+        id: 1,
+        name: name || 'Usuário',
+      },
+    };
+
+    return fakeResponse;
+  }
 }
 
 export async function deleteAccount(token: string) {
@@ -104,3 +176,4 @@ export const deleteLetter = async (id: number, token: string) => {
   });
   return response.data;
 };
+

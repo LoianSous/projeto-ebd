@@ -12,6 +12,22 @@ export const Styles = ( theme: any) => StyleSheet.create({
   position: 'relative',
   marginBottom: 15, // 👈 AQUI sim
 },
+logoWrap: {
+      width: 120,
+      height: 120,
+      borderRadius: 34,
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: theme.container,
+      // sombra (Android/iOS)
+      elevation: 2,
+      shadowColor: '#000',
+      shadowOpacity: 0.08,
+      shadowRadius: 10,
+      shadowOffset: { width: 0, height: 6 },
+      marginBottom: 18,
+      marginTop: 30,
+    },
 eyeButton: {
   position: 'absolute',
   right: 12,
