@@ -183,11 +183,11 @@ export default function Usuario() {
         </TouchableWithoutFeedback>
 
         <View style={styles.modalOverlay}>
-          <View style={[styles.modalSheet, { backgroundColor: theme.text }]}>
+          <View style={[styles.modalSheet, { backgroundColor: theme.container }]}>
             <View style={styles.modalHandle} />
 
             <View style={styles.modalHeader}>
-              <Text style={[styles.modalTitle, { color: theme.titlemodalcolor }]}>
+              <Text style={[styles.modalTitle, { color: theme.text }]}>
                 🎨 Escolha o tema
               </Text>
 
@@ -195,12 +195,12 @@ export default function Usuario() {
                 onPress={() => setShowThemeModal(false)}
                 hitSlop={10}
               >
-                <Feather name="x" size={22} color={theme.textinput} />
+                <Feather name="x" size={22} color={theme.text} />
               </TouchableOpacity>
             </View>
 
             <ThemeOption
-              label="Luz da manhã"
+              label="Padrão"
               name="light"
               active={currentTheme === 'light'}
               theme={theme}

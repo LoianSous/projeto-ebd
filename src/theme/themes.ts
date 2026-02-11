@@ -1,97 +1,157 @@
 export const LightTheme = {
-  // Backgrounds
-  background: '#F6F4EA', // bege claro
-  container: '#FFFFFF', // branco para cards
+  preview: '#EDEDF5',
 
-  // Cores principais
-  primary: '#655C00', // dourado principal
-  primaryDark: '#4E4700',
-  primaryLight: '#8A7F1F',
+  // Backgrounds (igual ao PDF – cinza muito suave)
+  background: '#F3F4F6',
+  container: '#FFFFFF',
 
-  // Textos
-  text: '#3B3600',
-  texttitle: '#655C00',
-  textnomeconfig: '#655C00',
-  textperfil: '#655C00',
-  texteditarcartas: '#655C00',
-  textsair: '#655C00',
-  textinput: '#655C00',
-  textinputdentro: '#3B3600',
-  textmodalcolor: '#1E1E1E',
-  titlemodalcolor: '#FFFFFF',
+  // Cores principais (roxo profundo elegante)
+  primary: '#191034',
+  primaryDark: '#120A28',
+  primaryLight: '#2A1B5C',
+
+  // Textos (todos no tom solicitado)
+  text: '#191034',
+  texttitle: '#191034',
+  textnomeconfig: '#191034',
+  textperfil: '#191034',
+  texteditarcartas: '#191034',
+  textsair: '#191034',
+  textinput: '#191034',
+  textinputdentro: '#191034',
+
+  // Modal
+  textmodalcolor: '#191034',
+  titlemodalcolor: '#191034',
   textmodalsenha: '#FFFFFF',
 
-  // Ícones
-  arrow: '#655C00',
-  icontemas: '#655C00',
-  gear: '#655C00',
-  olho: '#655C00',
-  iconperfil: '#655C00',
-  iconcompartilhar: '#655C00',
-  permissoes: '#655C00',
-  temas: '#655C00',
-  circlebar: '#655C00',
-  iconbar: '#FFFFFF',
+  // Ícones (seguindo o texto principal)
+  olho: '#191034',
+  arrow: '#191034',
+  icontemas: '#191034',
+  gear: '#191034',
+  iconperfil: '#191034',
+  iconcompartilhar: '#191034',
+  permissoes: '#191034',
+  temas: '#191034',
+  circlebar: '#191034',
+  iconbar: '#E5E7EB',
 
   // Inputs
-  inputBackground: '#FFFFFF',
+  inputBackground: '#E5E7EB',
 
-  // Botões
-  buttonBackground: '#655C00',
-  buttonText: '#FFFFFF',
+  // Botões (como no PDF – fundo claro, texto escuro)
+  buttonBackground: '#E5E7EB',
+  buttonText: '#191034',
+  buttonmodal: '#FFFFFF',
 
   // Outros
-  preview: '#EFECD9',
-  fundoconfirmarsenha: '#1E1E1E',
+  fundoconfirmarsenha: '#1E11E',
   carregandotextedit: '#FFFFFF',
 };
+
 
 export const DarkTheme = {
   // Preview
   preview: '#121212',
 
-  // Backgrounds
-  background: '#121212',
-  container: '#1E1E1E',
+  // Backgrounds (invertido)
+  background: '#EDEDED',      // antes escuro
+  container: '#FFFFFF',       // antes escuro
 
   // Cores principais
-  primary: '#FFFFFF',
-  primaryDark: '#E5E5E5',
-  primaryLight: '#FFFFFF',
+  primary: '#121212',         // antes claro
+  primaryDark: '#0F0F10',
+  primaryLight: '#1B1B1D',
 
-  // Textos (ajustado para aparecer no fundo escuro)
-  text: '#F5F5F5',
-  texttitle: '#FFFFFF',
-  textnomeconfig: '#F5F5F5',
-  textperfil: '#F5F5F5',
-  texteditarcartas: '#F5F5F5',
-  textsair: '#F5F5F5',
-  textinput: '#FFFFFF',
+  // Textos (invertido)
+  text: '#121212',            // texto principal agora escuro
+  texttitle: '#121212',
+  textnomeconfig: '#121212',
+  textperfil: '#121212',
+  texteditarcartas: '#121212',
+  textsair: '#121212',
+  textinput: '#121212',
+  textinputdentro: '#121212',
+
+  // Modal (invertido)
+  textmodalcolor: '#121212',
+  titlemodalcolor: '#121212',
+  textmodalsenha: '#121212',
+
+  // Ícones (invertido)
+  arrow: '#121212',
+  icontemas: '#121212',
+  gear: '#121212',
+  olho: '#121212',
+  iconperfil: '#121212',
+  iconcompartilhar: '#121212',
+  permissoes: '#121212',
+  temas: '#121212',
+  circlebar: '#F5F5F5',       // agora escuro
+  iconbar: '#121212',
+
+  // Inputs
+  inputBackground: '#F5F5F5', // antes escuro
+
+  // Botões (invertido)
+  buttonBackground: '#121212',  // antes claro
+  buttonText: '#FFFFFF',        // agora claro para contraste
+  buttonmodal: '#FFFFFF',
+
+  // Outros
+  fundoconfirmarsenha: '#F5F5F5',
+  carregandotextedit: '#121212',
+};
+
+
+export const VigiliaTheme = {
+  // Preview
+  preview: '#0B1020',
+
+  // Backgrounds
+  background: '#0B1020',
+  container: '#111A33',
+
+  // Cores principais (azul “noite”)
+  primary: '#A5B4FC',
+  primaryDark: '#818CF8',
+  primaryLight: '#C7D2FE',
+
+  // Textos
+  text: '#E5E7EB',
+  texttitle: '#A5B4FC',
+  textnomeconfig: '#A5B4FC',
+  textperfil: '#A5B4FC',
+  texteditarcartas: '#A5B4FC',
+  textsair: '#A5B4FC',
+  textinput: '#A5B4FC',
   textinputdentro: '#FFFFFF',
-  textmodalcolor: '#ABABAB',
+  textmodalcolor: '#E5E7EB',
   titlemodalcolor: '#FFFFFF',
   textmodalsenha: '#FFFFFF',
 
-  // Ícones (ajustado)
-  olho: '#FFFFFF',
-  icontemas: '#FFFFFF',
-  iconcompartilhar: '#FFFFFF',
-  iconperfil: '#FFFFFF',
-  arrow: '#FFFFFF',
-  gear: '#FFFFFF',
-  permissoes: '#FFFFFF',
-  temas: '#FFFFFF',
-  iconbar: '#FFFFFF',
+  // Ícones
+  arrow: '#A5B4FC',
+  icontemas: '#A5B4FC',
+  gear: '#A5B4FC',
+  olho: '#A5B4FC',
+  iconperfil: '#A5B4FC',
+  iconcompartilhar: '#A5B4FC',
+  permissoes: '#A5B4FC',
+  temas: '#A5B4FC',
+  circlebar: '#FFFFFF',
+  iconbar: '#A5B4FC',
 
   // Inputs
-  inputBackground: '#2A2A2A',
+  inputBackground: '#111A33',
 
   // Botões
-  buttonBackground: '#2A2A2A',
-  buttonText: '#FFFFFF',
+  buttonBackground: '#A5B4FC',
+  buttonText: '#0B1020',
+  buttonmodal: '#FFFFFF',
 
   // Outros
-  circlebar: '#2A2A2A',
   fundoconfirmarsenha: '#1E1E1E',
   carregandotextedit: '#FFFFFF',
 };
@@ -137,6 +197,7 @@ export const ConcilioTheme = {
   // Botões
   buttonBackground: '#655C00',
   buttonText: '#FFFFFF',
+  buttonmodal: '#FFFFFF',
 
   // Outros
   preview: '#EFECD9',
@@ -145,181 +206,203 @@ export const ConcilioTheme = {
 };
 
 export const ProfundoTheme = {
-  preview: '#f2a5a7',
-  background: '#e3b39f',
-  container: '#edd5c5',
-  primary: '#f2a5a7',
-  primaryDark: '#DE7E81',
-  primaryLight: '#F7C1C3',
+    // Backgrounds
+  background: '#F9FAFB',     // quase branco
+  container: '#FFFFFF',
+
+  // Cores principais (cinza neutro)
+  primary: '#4B5563',        // cinza médio
+  primaryDark: '#374151',
+  primaryLight: '#9CA3AF',
 
   // Textos
-  text: '#FFFFFF',
-  texttitle: '#FFFFFF',
-  textnomeconfig: '#B41513',
-  textperfil: '#FFFFFF',
-  texteditarcartas: '#FFFFFF',
-  textsair: '#FFFFFF',
-  textinput: '#FFFFFF',
-  textinputdentro: '#f2a5a7',
-  textmodalcolor: '#f2a5a7',
-  titlemodalcolor: '#f2a5a7',
+  text: '#374151',           // cinza elegante (não escuro demais)
+  texttitle: '#1F2937',      // levemente mais forte
+  textnomeconfig: '#374151',
+  textperfil: '#374151',
+  texteditarcartas: '#374151',
+  textsair: '#374151',
+  textinput: '#374151',
+  textinputdentro: '#374151',
+
+  // Modal
+  textmodalcolor: '#374151',
+  titlemodalcolor: '#1F2937',
   textmodalsenha: '#FFFFFF',
 
   // Ícones
-  olho: '#B41513',
-  arrow: '#B41513',
-  icontemas: '#fed4f6',
-  gear: '#B41513',
-  iconperfil: '#FFFFFF',
-  iconcompartilhar: '#FFFFFF',
-  permissoes: '#FFFFFF',
-  temas: '#FFFFFF',
-  iconbar: '#F4F4F5',
+  arrow: '#4B5563',
+  icontemas: '#4B5563',
+  gear: '#4B5563',
+  olho: '#4B5563',
+  iconperfil: '#4B5563',
+  iconcompartilhar: '#4B5563',
+  permissoes: '#4B5563',
+  temas: '#4B5563',
+  circlebar: '#FFFFFF',
+  iconbar: '#4B5563',
 
   // Inputs
-  inputBackground: '#edd5c5',
+  inputBackground: '#F3F4F6',
 
   // Botões
-  buttonBackground: '#f2a5a7',
-  buttonText: '#edd5c5',
+  buttonBackground: '#4B5563',
+  buttonText: '#FFFFFF',
+  buttonmodal: '#FFFFFF',
 
   // Outros
-  circlebar: '#edd5c5',
-  fundoconfirmarsenha: '#1E1E1E',
+  preview: '#374151',
+  fundoconfirmarsenha: '#374151',
   carregandotextedit: '#FFFFFF',
 };
 
 export const MissaoTheme = {
-  preview: '#38BDF8',
-  background: '#0F172A',
-  container: '#020617',
-  primary: '#38BDF8',
-  primaryDark: '#0EA5E9',
-  primaryLight: '#7DD3FC',
+  // Backgrounds (amanhecer suave)
+  background: '#FFF4E6',        // creme pêssego claro
+  container: '#FFFFFF',
 
-  // Textos
-  text: '#E5E7EB',
-  texttitle: '#E5E7EB',
-  textnomeconfig: '#E5E7EB',
-  textperfil: '#E5E7EB',
-  texteditarcartas: '#E5E7EB',
-  textsair: '#E5E7EB',
-  textinput: '#FFFFFF',
-  textinputdentro: '#FFFFFF',
-  textmodalcolor: '#FFFFFF',
+  // Cores principais (dourado suave elegante)
+  primary: '#D4A373',           // dourado amanhecer suave
+  primaryDark: '#B08968',
+  primaryLight: '#EFD8C2',
+
+  // Textos (mais profundos e elegantes)
+  text: '#5E503F',              // marrom quente elegante
+  texttitle: '#5E503F',
+  textnomeconfig: '#5E503F',
+  textperfil: '#5E503F',
+  texteditarcartas: '#5E503F',
+  textsair: '#5E503F',
+  textinput: '#5E503F',
+  textinputdentro: '#5E503F',
+
+  // Modal
+  textmodalcolor: '#5E503F',
   titlemodalcolor: '#FFFFFF',
   textmodalsenha: '#FFFFFF',
 
-  // Ícones
-  olho: '#38BDF8',
-  arrow: '#38BDF8',
-  icontemas: '#FFFFFF',
-  gear: '#38BDF8',
-  iconperfil: '#38BDF8',
-  permissoes: '#38BDF8',
-  temas: '#38BDF8',
-  iconcompartilhar: '#FFFFFF',
-  iconbar: '#E5E7EB',
+  // Ícones (agora destaque suave, não gritante)
+  arrow: '#D4A373',
+  icontemas: '#D4A373',
+  gear: '#D4A373',
+  olho: '#D4A373',
+  iconperfil: '#D4A373',
+  iconcompartilhar: '#D4A373',
+  permissoes: '#D4A373',
+  temas: '#D4A373',
+  circlebar: '#FFFFFF',
+  iconbar: '#D4A373',
 
   // Inputs
-  inputBackground: '#020617',
+  inputBackground: '#FAF3EB',
 
-  // Botões
-  buttonBackground: '#38BDF8',
-  buttonText: '#020617',
+  // Botões (agora elegantes, não amarelo forte)
+  buttonBackground: '#D4A373',
+  buttonText: '#FFFFFF',
+  buttonmodal: '#FFFFFF',
 
   // Outros
-  circlebar: '#38BDF8',
-  fundoconfirmarsenha: '#1E1E1E',
+  preview: '#EFD8C2',
+  fundoconfirmarsenha: '#5E503F',
   carregandotextedit: '#FFFFFF',
 };
 
 export const AltarTheme = {
-  preview: '#A855F7',
-  background: '#FDF4FF',
+  preview: '#6B1E1E',
+
+  // Backgrounds
+  background: '#F6F1E8',      // marfim suave
   container: '#FFFFFF',
-  primary: '#A855F7',
-  primaryDark: '#7C3AED',
-  primaryLight: '#C084FC',
+
+  // Cores principais (vinho altar)
+  primary: '#6B1E1E',
+  primaryDark: '#4A1313',
+  primaryLight: '#A94444',
 
   // Textos
-  text: '#1F2937',
-  texttitle: '#1E1E1E',
-  textnomeconfig: '#1F2937',
-  textperfil: '#1F2937',
-  texteditarcartas: '#1F2937',
-  textsair: '#1F2937',
-  textinput: '#1F2937',
-  textinputdentro: '#1F2937',
-  textmodalcolor: '#1F2937',
-  titlemodalcolor: '#1E1E1E',
+  text: '#2C2C2C',
+  texttitle: '#6B1E1E',
+  textnomeconfig: '#6B1E1E',
+  textperfil: '#6B1E1E',
+  texteditarcartas: '#6B1E1E',
+  textsair: '#6B1E1E',
+  textinput: '#6B1E1E',
+  textinputdentro: '#2C2C2C',
+
+  // Modal
+  textmodalcolor: '#2C2C2C',
+  titlemodalcolor: '#6B1E1E',
   textmodalsenha: '#FFFFFF',
 
-  // Ícones
-  olho: '#A855F7',
-  arrow: '#A855F7',
-  icontemas: '#A855F7',
-  gear: '#A855F7',
-  iconperfil: '#A855F7',
-  permissoes: '#A855F7',
-  temas: '#A855F7',
-  iconcompartilhar: '#A855F7',
-  iconbar: '#1F2937',
+  // Ícones (vinho + dourado como detalhe)
+  olho: '#4A1313',
+  arrow: '#4A1313',
+  icontemas: '#4A1313',
+  gear: '#4A1313',
+  iconperfil: '#4A1313',
+  iconcompartilhar: '#4A1313',
+  permissoes: '#4A1313',
+  temas: '#4A1313',
+  circlebar: '#FFFFFF',
+  iconbar: '#6B1E1E',
 
   // Inputs
-  inputBackground: '#FAE8FF',
+  inputBackground: '#EFE7DB',
 
   // Botões
-  buttonBackground: '#A855F7',
+  buttonBackground: '#6B1E1E',
   buttonText: '#FFFFFF',
+  buttonmodal: '#FFFFFF',
 
   // Outros
-  circlebar: '#A855F7',
-  fundoconfirmarsenha: '#1E1E1E',
+  fundoconfirmarsenha: '#2C2C2C',
   carregandotextedit: '#FFFFFF',
 };
 
 export const ColheitaTheme = {
-  preview: '#22D3EE',
-  background: '#020617',
-  container: '#020617',
-  primary: '#22D3EE',
-  primaryDark: '#06B6D4',
-  primaryLight: '#67E8F9',
+  preview: '#065F46',
+  background: '#F3FDF7',
+  container: '#FFFFFF',
+
+  // Verde “colheita”
+  primary: '#16A34A',
+  primaryDark: '#15803D',
+  primaryLight: '#4ADE80',
 
   // Textos
-  text: '#E5E7EB',
-  texttitle: '#E5E7EB',
-  textnomeconfig: '#E5E7EB',
-  textperfil: '#E5E7EB',
-  texteditarcartas: '#E5E7EB',
-  textsair: '#E5E7EB',
-  textinput: '#FFFFFF',
-  textinputdentro: '#FFFFFF',
-  textmodalcolor: '#E5E7EB',
-  titlemodalcolor: '#E5E7EB',
+  text: '#14532D',
+  texttitle: '#16A34A',
+  textnomeconfig: '#16A34A',
+  textperfil: '#16A34A',
+  texteditarcartas: '#16A34A',
+  textsair: '#16A34A',
+  textinput: '#16A34A',
+  textinputdentro: '#14532D',
+  textmodalcolor: '#1E1E1E',
+  titlemodalcolor: '#FFFFFF',
   textmodalsenha: '#FFFFFF',
 
   // Ícones
-  olho: '#22D3EE',
-  arrow: '#22D3EE',
-  icontemas: '#FFFFFF',
-  gear: '#22D3EE',
-  iconperfil: '#22D3EE',
-  permissoes: '#22D3EE',
-  temas: '#22D3EE',
-  iconcompartilhar: '#FFFFFF',
-  iconbar: '#22D3EE',
+  olho: '#16A34A',
+  arrow: '#16A34A',
+  icontemas: '#16A34A',
+  gear: '#16A34A',
+  iconperfil: '#16A34A',
+  iconcompartilhar: '#16A34A',
+  permissoes: '#16A34A',
+  temas: '#16A34A',
+  circlebar: '#FFFFFF',
+  iconbar: '#16A34A',
 
   // Inputs
-  inputBackground: '#0B1220',
+  inputBackground: '#E7F7ED',
 
   // Botões
-  buttonBackground: '#22D3EE',
-  buttonText: '#020617',
+  buttonBackground: '#16A34A',
+  buttonText: '#FFFFFF',
+  buttonmodal: '#FFFFFF',
 
   // Outros
-  circlebar: '#A78BFA',
   fundoconfirmarsenha: '#1E1E1E',
   carregandotextedit: '#FFFFFF',
 };
@@ -327,6 +410,7 @@ export const ColheitaTheme = {
 export const themes = {
   light: LightTheme,
   dark: DarkTheme,
+  Vigilia: VigiliaTheme,
   Concilio: ConcilioTheme,
   Profundo: ProfundoTheme,
   Missao: MissaoTheme,
