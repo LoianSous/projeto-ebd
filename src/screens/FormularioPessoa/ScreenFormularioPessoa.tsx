@@ -8,7 +8,7 @@ import {
   Animated,
   Easing,
   Switch,
-  Dimensions
+  Modal,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import DateTimePickerModal from "react-native-modal-datetime-picker";
@@ -62,6 +62,17 @@ export default function FormularioPessoa() {
 
   const [showBirthPicker, setShowBirthPicker] = useState(false);
   const [showMemberPicker, setShowMemberPicker] = useState(false);
+
+  const [showEstadoCivilModal, setShowEstadoCivilModal] = useState(false);
+
+  const estadosCivis = [
+    "Solteiro(a)",
+    "Casado(a)",
+    "Divorciado(a)",
+    "Viúvo(a)",
+    "União Estável"
+  ];
+
 
   /* ===================== ANIMAÇÃO ===================== */
 
@@ -178,84 +189,101 @@ export default function FormularioPessoa() {
   return (
     <>
       <SafeAreaView style={styles.container}>
+        <TouchableOpacity
+  onPress={() => navigation.goBack()}
+  style={{
+    paddingHorizontal: 16,
+    paddingTop: 6,
+    paddingBottom: 6,
+    alignSelf: 'flex-start',
+  }}
+  hitSlop={10}
+>
+  <MaterialCommunityIcons
+    name="arrow-left"
+    size={30}
+    color={theme.primary}
+  />
+</TouchableOpacity>
+
         <ScrollView contentContainerStyle={styles.content}>
 
           <Text style={styles.title}>Cadastro ETAD</Text>
 
           {/* ===================== BARRA PROGRESSO ===================== */}
           <View style={{ marginHorizontal: 20, marginVertical: 20 }}>
-  {/* Linha de fundo */}
-  <View
-    style={{
-      width: BAR_WIDTH,
-      height: 4,
-      backgroundColor: '#E0E0E0',
-      marginHorizontal: HORIZONTAL_PADDING + CIRCLE_SIZE / 2,
-      borderRadius: 2,
-      position: 'relative',
-    }}
-  />
+            {/* Linha de fundo */}
+            <View
+              style={{
+                width: BAR_WIDTH,
+                height: 4,
+                backgroundColor: '#E0E0E0',
+                marginHorizontal: HORIZONTAL_PADDING + CIRCLE_SIZE / 2,
+                borderRadius: 2,
+                position: 'relative',
+              }}
+            />
 
-  {/* Linha animada */}
-  <Animated.View
-    style={{
-      position: 'absolute',
-      left: HORIZONTAL_PADDING + CIRCLE_SIZE / 2,
-      height: 4,
-      backgroundColor: theme.primary,
-      borderRadius: 2,
-      width: progressAnim.interpolate({
-        inputRange: [0, totalSteps - 1],
-        outputRange: [0, BAR_WIDTH],
-      }),
-    }}
-  />
+            {/* Linha animada */}
+            <Animated.View
+              style={{
+                position: 'absolute',
+                left: HORIZONTAL_PADDING + CIRCLE_SIZE / 2,
+                height: 4,
+                backgroundColor: theme.primary,
+                borderRadius: 2,
+                width: progressAnim.interpolate({
+                  inputRange: [0, totalSteps - 1],
+                  outputRange: [0, BAR_WIDTH],
+                }),
+              }}
+            />
 
-  {/* Bolinhas */}
-  <View
-    style={{
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      marginHorizontal: HORIZONTAL_PADDING,
-      marginTop: -15,
-    }}
-  >
-    {[1, 2, 3].map((item) => {
-      const isCompleted = step > item;
-      const isCurrent = step === item;
+            {/* Bolinhas */}
+            <View
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                marginHorizontal: HORIZONTAL_PADDING,
+                marginTop: -15,
+              }}
+            >
+              {[1, 2, 3].map((item) => {
+                const isCompleted = step > item;
+                const isCurrent = step === item;
 
-      return (
-        <View
-          key={item}
-          style={{
-            width: 24,
-            height: 24,
-            borderRadius: 12,
-            backgroundColor: isCompleted
-              ? theme.primary
-              : isCurrent
-                ? theme.primary
-                : '#FFFFFF',
-            borderWidth: 2,
-            borderColor: isCompleted || isCurrent ? '#FFE7E7' : '#CCCCCC',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <Text
-            style={{
-              color: isCompleted || isCurrent ? '#FFFFFF' : '#999',
-              fontSize: 12,
-              fontWeight: 'bold',
-            }}
-          >
-            {item}
-          </Text>
-        </View>
-      );
-    })}
-  </View>
-</View>
+                return (
+                  <View
+                    key={item}
+                    style={{
+                      width: 24,
+                      height: 24,
+                      borderRadius: 12,
+                      backgroundColor: isCompleted
+                        ? theme.primary
+                        : isCurrent
+                          ? theme.primary
+                          : '#FFFFFF',
+                      borderWidth: 2,
+                      borderColor: isCompleted || isCurrent ? '#FFE7E7' : '#CCCCCC',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <Text
+                      style={{
+                        color: isCompleted || isCurrent ? '#FFFFFF' : '#999',
+                        fontSize: 12,
+                        fontWeight: 'bold',
+                      }}
+                    >
+                      {item}
+                    </Text>
+                  </View>
+                );
+              })}
+            </View>
+          </View>
           {/* ===================== ETAPA 1 ===================== */}
           {step === 1 && (
             <>
@@ -266,14 +294,27 @@ export default function FormularioPessoa() {
               <TextInput style={styles.input} placeholder="000.000.000-00" placeholderTextColor={theme.textinput} keyboardType="numeric" value={cpf} onChangeText={formatCPF} />
 
               <Text style={styles.label}>Data de Nascimento</Text>
-              <TouchableOpacity style={[styles.input, { justifyContent: 'center' }]} onPress={() => setShowBirthPicker(true)}>
-                <Text style={{ color: dataNascimento ? theme.texttitle : theme.textinput }}>
-                  {dataNascimento ? dataNascimento.split('-').reverse().join('/') : "Selecionar data"}
+              <TouchableOpacity
+                style={[styles.input, { justifyContent: 'center' }]}
+                onPress={() => setShowBirthPicker(true)}
+              >
+                <Text style={{ color: theme.textinput }}>
+                  {dataNascimento
+                    ? dataNascimento.split('-').reverse().join('/')
+                    : 'Qual a data de nascimento?'}
                 </Text>
               </TouchableOpacity>
 
+
               <Text style={styles.label}>Estado Civil</Text>
-              <TextInput style={styles.input} placeholder="Ex: Solteiro(a)" placeholderTextColor={theme.textinput} value={estadoCivil} onChangeText={setEstadoCivil} />
+              <TouchableOpacity
+                onPress={() => setShowEstadoCivilModal(true)}
+                style={[styles.input, { justifyContent: 'center' }]}
+              >
+                <Text style={{ color: estadoCivil ? theme.texttitle : theme.textinput }}>
+                  {estadoCivil || "Selecione o estado civil"}
+                </Text>
+              </TouchableOpacity>
 
               <Text style={styles.label}>Naturalidade</Text>
               <TextInput style={styles.input} placeholder="Cidade de nascimento" placeholderTextColor={theme.textinput} value={naturalidade} onChangeText={setNaturalidade} />
@@ -327,11 +368,18 @@ export default function FormularioPessoa() {
               </View>
 
               <Text style={styles.label}>Membro desde</Text>
-              <TouchableOpacity style={[styles.input, { justifyContent: 'center' }]} onPress={() => setShowMemberPicker(true)}>
+
+              <TouchableOpacity
+                style={[styles.input, { justifyContent: 'center' }]}
+                onPress={() => setShowMemberPicker(true)}
+                activeOpacity={0.8}
+              >
                 <Text style={{ color: membroDesde ? theme.texttitle : theme.textinput }}>
                   {membroDesde ? membroDesde.split('-').reverse().join('/') : "Selecionar data"}
                 </Text>
               </TouchableOpacity>
+
+
 
               <Text style={styles.label}>Cargo na Igreja</Text>
               <TextInput style={styles.input} placeholder="Ex: Líder, Obreiro..." placeholderTextColor={theme.textinput} value={igrejaCargo} onChangeText={setIgrejaCargo} />
@@ -372,11 +420,60 @@ export default function FormularioPessoa() {
           </View>
 
         </ScrollView>
+        <Modal visible={showEstadoCivilModal} transparent animationType="slide">
+          <View
+            style={{
+              flex: 1,
+              backgroundColor: "rgba(0,0,0,0.4)",
+              justifyContent: "flex-end",
+            }}
+          >
+            <View
+              style={{
+                backgroundColor: "#fff",
+                borderTopLeftRadius: 24,
+                borderTopRightRadius: 24,
+                padding: 20,
+                maxHeight: "60%",
+              }}
+            >
+              <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 12 }}>
+                Selecione o estado civil
+              </Text>
+
+              <ScrollView>
+                {estadosCivis.map(item => (
+                  <TouchableOpacity
+                    key={item}
+                    onPress={() => {
+                      setEstadoCivil(item);
+                      setShowEstadoCivilModal(false);
+                    }}
+                    style={{
+                      padding: 14,
+                      borderRadius: 14,
+                      borderWidth: 1,
+                      borderColor:
+                        item === estadoCivil ? theme.primary : "#E5E7EB",
+                      marginBottom: 10,
+                    }}
+                  >
+                    <Text style={{ fontSize: 16 }}>
+                      {item}
+                    </Text>
+                  </TouchableOpacity>
+                ))}
+              </ScrollView>
+            </View>
+          </View>
+        </Modal>
+
       </SafeAreaView>
 
       <DateTimePickerModal
         isVisible={showBirthPicker}
         mode="date"
+        display="spinner"
         maximumDate={new Date()}
         onConfirm={handleConfirmBirth}
         onCancel={() => setShowBirthPicker(false)}
@@ -385,6 +482,7 @@ export default function FormularioPessoa() {
       <DateTimePickerModal
         isVisible={showMemberPicker}
         mode="date"
+        display="spinner"
         maximumDate={new Date()}
         onConfirm={handleConfirmMember}
         onCancel={() => setShowMemberPicker(false)}
