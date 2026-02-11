@@ -22,7 +22,7 @@ projeto-ebd/
 │  │  │  ├─ ScreenConfirmPassword.tsx
 │  │  │  └─ style.ts
 │  │  ├─ FormularioCarta/
-│  │  │  ├─ ScreenFormularioCarta.tsx
+│  │  │  ├─ ScreenFormularioPessoa.tsx
 │  │  │  └─ style.ts
 │  │  ├─ PagamentoPIX/
 │  │  │  ├─ ScreenPagamentoPIX.tsx
@@ -58,6 +58,7 @@ projeto-ebd/
 │  ├─ services/
 │  │  ├─ generateShareId.ts
 │  │  ├─ api.ts
+│  │  ├─ pessoaService.ts
 │  │  ├─ auth.ts
 │  │  ├─ paymentService.ts
 │  │  └─ supabase.ts
